@@ -20,7 +20,7 @@ dequeue :: Queue a -> (Maybe a, Queue a)
 dequeue q =
     case q of 
         Queue ([], []) -> (Nothing, q)
-        Queue (ins, []) -> (Just $ head ins, Queue ([], reverse $ tail ins))
+        Queue (ins, []) -> (Just $ head $ reverse ins, Queue ([], tail $ reverse $ ins))
         Queue (ins, outs) -> (Just $ head outs, Queue (ins, tail outs))
 
 
