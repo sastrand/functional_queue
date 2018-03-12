@@ -30,5 +30,5 @@ main =
 
         putStrLn "<><>"
 
-        let w = enqueue "hello" $ enqueue "Haskell" empty
+        let w = enqueue "Haskell" $ enqueue "Hello, " empty
         print w
