@@ -27,5 +27,8 @@ main =
         let v = enqueue 4 $ snd $ dequeue u
         print $ isEmpty v
         print $ frontOf v
-        -- print $ frontOf s
 
+        putStrLn "<><>"
+
+        let w = enqueue "hello" $ enqueue "Haskell" empty
+        print w
