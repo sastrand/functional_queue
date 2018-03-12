@@ -23,5 +23,7 @@ main =
         putStrLn "<><>"
 
         let u = enqueue 3 $ enqueue 2 $ enqueue 1 empty
-        print $ dequeue u
+        let v = enqueue 4 $ snd $ dequeue u
+        print $ isEmpty v
+        -- print $ isEmpty $ enqueue 4 u
 

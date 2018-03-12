@@ -10,11 +10,12 @@ isEmpty :: Queue a -> Bool
 isEmpty q =
     case q of 
         Queue ([], [])  -> True
-        Queue ([], xs)  -> False
-        Queue (xs, [])  -> False
+        Queue (_ , xs)  -> False
 
--- frontOf :: Queue a -> a
--- frontOf (Queue (x:xs)) = x
+-- frontOf :: Queue a -> Maybe a
+-- frontOf q =
+--     case q of
+--         Queue 
 
 dequeue :: Queue a -> (Maybe a, Queue a)
 dequeue q =
