@@ -2,10 +2,10 @@ module Queue (empty, isEmpty) where
 
 data Queue a = Queue ([a], [a]) deriving (Show)
 
--- empty :: Queue a
+empty :: Queue a
 empty = Queue([], [])
 
--- isEmpty :: Queue a -> Bool
+isEmpty :: Queue a -> Bool
 isEmpty x =
     case x of 
         Queue ([], [])     -> True
