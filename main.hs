@@ -1,5 +1,6 @@
 module Main (main) where
-import Queue (empty, isEmpty, dequeue, enqueue)
+
+import Queue (empty, isEmpty, frontOf, dequeue, enqueue)
 
 main :: IO()
 main = 
@@ -25,5 +26,6 @@ main =
         let u = enqueue 3 $ enqueue 2 $ enqueue 1 empty
         let v = enqueue 4 $ snd $ dequeue u
         print $ isEmpty v
-        -- print $ isEmpty $ enqueue 4 u
+        print $ frontOf v
+        -- print $ frontOf s
 
