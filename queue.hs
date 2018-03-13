@@ -1,7 +1,7 @@
-module Queue (empty, isEmpty, frontOf, dequeue, enqueue) where
+module Queue (Queue(..), empty, isEmpty, frontOf, dequeue, enqueue) where
 
 
-data Queue a = Queue ([a], [a]) deriving (Show)
+data Queue a = Queue ([a], [a]) deriving (Show, Eq)
 
 
 empty :: Queue a

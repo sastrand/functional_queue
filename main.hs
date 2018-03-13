@@ -1,6 +1,6 @@
 module Main (main) where
 
-import Queue (empty, isEmpty, frontOf, dequeue, enqueue)
+import Queue (Queue(..), empty, isEmpty, frontOf, dequeue, enqueue)
 
 main :: IO()
 main = 
@@ -32,3 +32,8 @@ main =
 
         let w = enqueue "Haskell" $ enqueue "Hello, " empty
         print w
+
+        putStrLn "<><>"
+        let x = empty
+        let y = empty
+        print $ enqueue 7 x == enqueue 7 y
