@@ -34,6 +34,7 @@ main =
         print w
 
         putStrLn "<><>"
+        
         let x = empty
         let y = empty
         print $ enqueue 7 x == enqueue 7 y
