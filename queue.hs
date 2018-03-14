@@ -18,17 +18,17 @@ isEmpty q =
 frontOf :: Queue a -> Maybe a
 frontOf q =
     case q of
-        Queue ([], []) -> Nothing
-        Queue (ins, []) -> Just $ head $ reverse ins
+        Queue ([], [])    -> Nothing
+        Queue (ins, [])   -> Just $ head $ reverse ins
         Queue (ins, outs) -> Just $ head outs
 
 
 dequeue :: Queue a -> (Maybe a, Queue a)
 dequeue q =
     case q of 
-        Queue ([], []) -> (Nothing, q)
-        Queue (ins, []) -> (Just $ head $ reverse ins, 
-                            Queue ([], tail $ reverse $ ins))
+        Queue ([], [])    -> (Nothing, q)
+        Queue (ins, [])   -> (Just $ head $ reverse ins, 
+                              Queue ([], tail $ reverse $ ins))
         Queue (ins, outs) -> (Just $ head outs, Queue (ins, tail outs))
 
 
